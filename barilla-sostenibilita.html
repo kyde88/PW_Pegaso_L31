@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!-- Lingua della pagina impostata di default: IT, cambio lingua gestito con collegamento a file JavaScript barilla-lang.js,
+ per la traduzione istantanea impostati tag data-i18n per paragrafi generici e datai18n-hmtl per paragrafi con enfasi -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barilla - Sostenibilità | Ogni scelta conta, ogni giorno.</title>
+    <link rel="icon" type="image/webp" href="img/farfalle.webp">
+    <!-- Link al file CSS -->
+    <link rel="stylesheet" href="barilla-sostenibilita.css">
+</head>
+
+<body>
+    <!-- Inseriti tag ARIA nella sezione body per migliorare l'accessibilità:
+     aria-label="xxxx": descrizione letta dagli screen reader;
+     aria-pressed="true / false": indica il selettore lingua premuto = attivo / non premuto = disattivato;
+     aria-hidden="true": elemento decorativo, ignorato da screen reader;
+     aria-labelledby: "xxxx": lega la sezione al suo titolo h2  -->
+
+    <header class="header-website" role="banner">
+        <div class="pulsanti-lingua" role="group" aria-label="Seleziona lingua">
+            <!-- Bottoni lingua IT/EN: -->
+            <button type="button" class="pulsante-lingua active" data-lang="it" title="Italiano" aria-pressed="true">
+                <img src="img/it.png" alt="" class="bandiera-lingua" width="24" height="18" aria-hidden="true"> IT
+            </button>
+            <button type="button" class="pulsante-lingua" data-lang="en" title="English" aria-pressed="false">
+                <img src="img/en.avif" alt="" class="bandiera-lingua" width="24" height="18" aria-hidden="true"> EN
+            </button>
+        </div>
+
+        <!-- Sezione decorativa con farfalle, logo e slogan -->
+        <div class="header-content">
+            <img src="img/farfalle.webp" alt="" class="farfalle farfalle-sx" aria-hidden="true">
+            <h1 class="logo">
+                <img src="img/barilla_new_logo.webp" alt="Logo Barilla" class="logo-img">
+            </h1>
+            <img src="img/farfalle.webp" alt="" class="farfalle farfalle-dx" aria-hidden="true">
+            <p class="slogan-website" data-i18n="slogan_website">Ogni scelta conta, ogni giorno.</p>
+        </div>
+    </header>
+
+    <!-- Menu di navigazione: classe CSS "main-nav" con proprietà position e valore sticky (resta fissata in alto durante lo scroll) -->
+    <nav class="main-nav" aria-label="Navigazione principale">
+        <ul>
+            <!-- href="#xxxx": ancora interna → porta alla section di riferimento con relativo id="xxxx" -->
+            <li><a href="#chi-siamo" data-i18n="nav_chi_siamo">L'Azienda</a></li>
+            <li><a href="#rapporto-2024" data-i18n="nav_rapporto">Il Rapporto di Sostenibilità</a></li>
+            <li><a href="#approccio" data-i18n="nav_approccio">L'approccio alla sostenibilità</a></li>
+            <li><a href="#pilastri" data-i18n="nav_pilastri">I 4 pilastri</a></li>
+            <li><a href="#download" data-i18n="nav_download">Scarica il report</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <!-- Ripetizione logo nel background -> gestita nella classe CSS -->
+        <div class="main-logo-bg" aria-hidden="true"></div>
+        <!-- Porta il contenuto centrale un livello sopra il background e ne delimita la larghezza -> gestito nella classe CSS -->
+        <div class="main-content-rail">
+
+        <!-- Chi è Barilla -->
+        <section id="chi-siamo" class="section section-light" aria-labelledby="chi-siamo-title">
+            <div class="container">
+                <h2 id="chi-siamo-title" data-i18n="chi_siamo_title">Chi è Barilla oggi</h2>
+                <p class="lead" data-i18n="chi_siamo_lead">Il Gruppo Barilla è un’impresa alimentare italiana a controllo familiare, fondata nel 1877 a Parma, oggi tra i principali operatori globali nel settore della pasta, dei prodotti da forno e delle salse. Nel corso della sua storia, Barilla ha costruito la propria crescita su un modello industriale che coniuga tradizione alimentare italiana, innovazione tecnologica e sviluppo internazionale, mantenendo una forte identità valoriale.
+                    È all’interno di questo scenario che Barilla colloca il proprio percorso di sostenibilità, inteso come parte integrante del modo di fare impresa e come risposta strategica alle trasformazioni del contesto operativo in cui l’azienda è chiamata a operare.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="100" data-prefix="+">100</span>
+                        <span class="stat-label" data-i18n="stat_paesi">Paesi nel mondo</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="8800" data-prefix="> ">8.800</span>
+                        <span class="stat-label" data-i18n="stat_persone">Persone</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="30"> 30</span>
+                        <span class="stat-label" data-i18n="stat_poli">Poli produttivi</span>
+                    </div>
+                </div>
+                <p class="lead" data-i18n="chi_siamo_descrizione">Un portafoglio di marchi che va ben oltre la pasta: Mulino Bianco, Wasa, Pavesi, Pan di Stelle, Harrys e molti altri.</p>
+                <p class="lead" data-i18n-html="chi_siamo_descrizione_2">Il cibo, per Barilla, non è solo un prodotto industriale: è <strong>cultura, relazione, responsabilità</strong>. Questo approccio guida sia le scelte di business sia il modo di intendere la sostenibilità grazie soprattutto ai valori che fanno di Barilla un leader mondiale.</p>
+                <div class="valori-barilla" aria-label="Valori Barilla">
+                    <div class="valore-row img-left">
+                        <img src="img/passione.jpg" alt="" class="valore-img" width="120" height="120" aria-hidden="true">
+                        <span class="valore-label valore-bg-green" data-i18n="valori_1">Passione</span>
+                    </div>
+                    <div class="valore-row img-right">                        
+                        <img src="img/coraggio.webp" alt="" class="valore-img" width="120" height="120" aria-hidden="true">
+                        <span class="valore-label valore-bg-white" data-i18n="valori_2">Coraggio</span>
+                    </div>
+                    <div class="valore-row img-left">
+                        <img src="img/fiducia.jpg" alt="" class="valore-img" width="120" height="120" aria-hidden="true">
+                        <span class="valore-label valore-bg-red" data-i18n="valori_3">Fiducia</span>
+                    </div>
+                    <div class="valore-row img-right">                        
+                        <img src="img/integrita.webp" alt="" class="valore-img" width="120" height="120" aria-hidden="true">
+                        <span class="valore-label valore-bg-green" data-i18n="valori_4">Integrità</span>
+                    </div>
+                    <div class="valore-row img-left">
+                        <img src="img/curiosita.jpg" alt="" class="valore-img" width="120" height="120" aria-hidden="true">
+                        <span class="valore-label valore-bg-white" data-i18n="valori_5">Curiosità</span>
+                    </div>
+                    <div class="valore-row img-right">
+                        <img src="img/amore.jpg" alt="" class="valore-img" width="120" height="120" aria-hidden="true">
+                        <span class="valore-label valore-bg-red" data-i18n="valori_6">Amore</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rapporto 2024 -->
+        <section id="rapporto-2024" class="section" aria-labelledby="rapporto-title">
+            <div class="container">
+                <h2 id="rapporto-title" data-i18n="rapporto_title">Cosa rappresenta il Rapporto di Sostenibilità</h2>
+                <p data-i18n="rapporto_intro">Il Rapporto di Sostenibilità racconta come Barilla sta affrontando un mondo che cambia rapidamente. Il documento non si limita a descrivere le attività svolte, ma racconta il percorso di sostenibilità intrapreso dall’impresa, con uno sguardo verso il 2030, per trasformare la visione aziendale in azioni quotidiane e impegni concreti.</p>
+                <!-- feature-list: lista decorata dal CSS con ✓ tramite ::before -->
+                <ul class="feature-list">
+                    <li class="sp" data-i18n-html="rapporto_1"><strong>Fotografa</strong> i risultati raggiunti</li>
+                    <li class="sp" data-i18n-html="rapporto_2"><strong>Spiega</strong> rischi e sfide future</li>
+                    <li class="sp" data-i18n-html="rapporto_3"><strong>Chiarisce</strong> gli impegni futuri, integrando la sostenibilità nella strategia industriale</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Approccio alla sostenibilità -->
+        <section id="approccio" class="section section-light" aria-labelledby="approccio-title">
+            <div class="container">
+                <h2 id="approccio-title" data-i18n="approccio_title">Il nuovo approccio alla sostenibilità</h2>
+                <p data-i18n-html="approccio_intro">Dal 2024 Barilla ha rafforzato il proprio modello, rendendo la sostenibilità <strong>parte integrante delle decisioni aziendali</strong>, non un'attività separata.</p>
+                <!-- Griglia con 6 card disposte su due righe -->
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <h3 data-i18n="approccio_1_title">Analisi di doppia materialità</h3>
+                        <p data-i18n="approccio_1_text">Valutare sia l'impatto dell'azienda su società e ambiente, sia i rischi che temi ambientali e sociali generano sul business.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3 data-i18n="approccio_2_title">Governance ESG strutturata</h3>
+                        <p data-i18n="approccio_2_text">Coinvolge oltre 150 persone in azienda e definisce 3 organi in stretta e reciproca collaborazione tra loro.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3 data-i18n="approccio_3_title">Allineamento agli ESRS</h3>
+                        <p data-i18n="approccio_3_text">Progressione verso gli standard europei di reporting organizzati secondo i pilastri: Ambientale, Sociale e di Governance.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3 data-i18n="approccio_4_title">Filiere responsabili</h3>
+                        <p data-i18n="approccio_4_text">I risultati ottenuti sono integrati nei processi decisionali aziendali, con il coinvolgimento diretto dei team acquisti.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3 data-i18n="approccio_5_title">Packaging sostenibile</h3>
+                        <p data-i18n="approccio_5_text">Definizione di KPI specifici per monitorare la qualità del lavoro e ridurre al minimo gli sprechi.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3 data-i18n="approccio_6_title">Barilla Zero Accident Program</h3>
+                        <p data-i18n="approccio_6_text">Ambizione all'azzeramento degli infortuni in tutti gli stabilimenti con l’introduzione dei Sistemi di Gestione HSEE certificati in accordo con la norma ISO 45001.</p>
+                    </div>
+                </div>
+                <p class="highlight-box" data-i18n-html="approccio_highlight">La sostenibilità non è più solo "fare bene", ma <strong>fare impresa in modo resiliente e responsabile</strong>.</p>
+            </div>
+        </section>
+
+        <!-- I 4 pilastri -->
+        <section id="pilastri" class="section" aria-labelledby="pilastri-title">
+            <div class="container">
+                <h2 id="pilastri-title" data-i18n="pilastri_title">I 4 pilastri strategici</h2>
+                <!-- Griglia con 4 colonne allineate -->
+                <div class="pilastri-grid">
+                    <article class="pilastro-card">
+                        <div class="pilastro-icon" aria-hidden="true">🌾</div>
+                        <h3 data-i18n="pilastro1_title">Prodotti</h3>
+                        <p class="pilastro-subtitle" data-i18n="pilastro1_sub">Buoni, sicuri, sempre più sani</p>
+                        <ul>
+                            <li data-i18n="pilastro1_1">Profilo nutrizionale migliorato (meno sale, zuccheri, grassi; più fibre)</li>
+                            <li data-i18n="pilastro1_2">Sicurezza e qualità alimentare</li>
+                            <li data-i18n="pilastro1_3">Trasparenza verso i consumatori</li>
+                        </ul>
+                    </article>
+                    <article class="pilastro-card">
+                        <div class="pilastro-icon" aria-hidden="true">👥</div>
+                        <h3 data-i18n="pilastro2_title">Persone</h3>
+                        <p class="pilastro-subtitle" data-i18n="pilastro2_sub">Sicurezza, inclusione, benessere</p>
+                        <ul>
+                            <li data-i18n="pilastro2_1">Programma Zero Infortuni in tutti gli stabilimenti</li>
+                            <li data-i18n="pilastro2_2">Equità salariale di genere</li>
+                            <li data-i18n="pilastro2_3">Inclusione, formazione e crescita</li>
+                            <li data-i18n="pilastro2_4">Dialogo con le comunità locali</li>
+                        </ul>
+                    </article>
+                    <article class="pilastro-card">
+                        <div class="pilastro-icon" aria-hidden="true">🌍</div>
+                        <h3 data-i18n="pilastro3_title">Filiere</h3>
+                        <p class="pilastro-subtitle" data-i18n="pilastro3_sub">Responsabilità dal campo alla tavola</p>
+                        <ul>
+                            <li data-i18n="pilastro3_1">Filiera responsabile con agricoltori e fornitori</li>
+                            <li data-i18n="pilastro3_2">Agricoltura sostenibile e rigenerativa</li>
+                            <li data-i18n="pilastro3_3">Tutela biodiversità, suolo e risorse idriche</li>
+                            <li data-i18n="pilastro3_4">Valori etici e sociali lungo tutta la filiera</li>
+                        </ul>
+                    </article>
+                    <article class="pilastro-card">
+                        <div class="pilastro-icon" aria-hidden="true">🌱</div>
+                        <h3 data-i18n="pilastro4_title">Clima</h3>
+                        <p class="pilastro-subtitle" data-i18n="pilastro4_sub">Meno emissioni, più resilienza</p>
+                        <ul>
+                            <li data-i18n="pilastro4_1">Riduzione emissioni lungo tutta la catena del valore</li>
+                            <li data-i18n="pilastro4_2">Energie rinnovabili e autoproduzione</li>
+                            <li data-i18n="pilastro4_3">Efficienza energetica e idrica</li>
+                            <li data-i18n="pilastro4_4">Analisi rischi climatici su materie prime e stabilimenti</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messaggio chiave -->
+        <section class="section section-message" aria-labelledby="messaggio-title">
+            <div class="container">
+                <h2 id="messaggio-title" data-i18n="messaggio_title">Il nostro messaggio</h2>
+                <div class="blockquote-with-image">
+                    <img src="img/pasta.png" alt="" class="message-pasta-img" width="200" height="200" aria-hidden="true">
+                    <blockquote>
+                        <p data-i18n-html="messaggio_quote">La sostenibilità non è un costo né una moda, ma una <strong>leva di competitività, fiducia e continuità nel tempo</strong>.</p>
+                    </blockquote>
+                </div>
+                <p data-i18n="messaggio_text">Barilla non si presenta come "perfetta", ma come un'azienda consapevole della complessità del contesto in cui opera e determinata a migliorare, passo dopo passo, insieme alle persone, ai fornitori e ai consumatori.</p>
+            </div>
+        </section>
+
+        <!-- Download Report -->
+        <section id="download" class="section section-light" aria-labelledby="download-section-title">
+            <div class="container">
+                <h2 id="download-section-title" data-i18n="download_title">Scarica il report di sostenibilità</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <h3 data-i18n="download_card1_title">Rapporto di Sostenibilità 2024</h3>
+                        <p data-i18n="download_card1_text">Il documento completo che fotografa i risultati, le sfide e gli impegni futuri.</p>
+                        <!-- Link come bottone per il download del report in file .pdf:
+                         - tag target="_blank" per apertura file in una nuova scheda;
+                         - rel="noopener noreferrer": sicurezza, previene accesso alla window originale -->
+                        <a href="2024_rapp.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="download_btn_pdf">Scarica PDF</a>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-text1" data-i18n="footer_text">Barilla S.p.A.</p>
+            <!-- Link alla pagina ufficiale -->
+            <p><a href="https://www.barilla.com" target="_blank" rel="noopener noreferrer">www.barilla.com</a></p>
+        </div>
+    </footer>
+    <!-- Link alla pagina JavaScript che gestisce il cambio lingua IT/EN -->
+    <script src="barilla-lang.js"></script>
+</body>
+</html>
